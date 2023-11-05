@@ -4,6 +4,21 @@
 #include<windows.h>
 using namespace std;
 
+void menu();
+
+class ManageMenu
+{
+protected:
+	string userName;
+public:
+	ManageMenu() {
+		cout << "\n\n\n\n\n\n\n\n Enter Your Name to continue as an Admin"  ;
+		cin >> userName;
+		system("CLS ");
+		menu();
+	}
+};
+
 class Customers {
 public:
 	std::string name, gender, address;
@@ -198,7 +213,7 @@ float Cabs::lastcabCost;
 						cout << "Invalid choice ! Redirecting .... \n Please Wait !" << endl;
 						Sleep(1100);
 						system("CLS");
-						hotels();
+						Hotels();
 					}
 					int gotoMenu;
 					cout << "\n Press 1 to redirect to Main menu";
@@ -247,7 +262,7 @@ float Cabs::lastcabCost;
 						cout << "Invalid choice ! Redirecting .... \n Please Wait !" << endl;
 						Sleep(1100);
 						system("CLS");
-						hotels();
+						Hotels();
 					}
 
 
@@ -288,7 +303,7 @@ float Cabs::lastcabCost;
 						cout << "Invalid choice ! Redirecting .... \n Please Wait !" << endl;
 						Sleep(1100);
 						system("CLS");
-						hotels();
+						Hotels();
 					}
 
 
@@ -329,7 +344,7 @@ float Cabs::lastcabCost;
 						cout << "Invalid choice ! Redirecting .... \n Please Wait !" << endl;
 						Sleep(1100);
 						system("CLS");
-						hotels();
+						Hotels();
 					}
 
 
@@ -447,8 +462,56 @@ float Cabs::lastcabCost;
 				menu();
 			}
 		}
-		else if(mainChoice == 2)
+		else if (mainChoice == 2)
+		{
+			a3.cabDetails();
+		}
+		else if (mainChoice == 3)
+		{
+			cout << "--> Book a luxury Hotel using the system <--"<<endl;
+			a4.Hotels();
+		}
+		else if (mainChoice == 4)
+		{
+			cout << "--> Get your receipt <--" << endl;
+			a5.printBill();
+			cout << "Your receipt is generated you can get it from file path"<<endl;
+			cout << "To display the receipt in the screen , Enter 1: or Enter another key to back main menu:";
+			cin >> gotoMenu;
+			if (gotoMenu == 1) {
+				system("CLS");
+				a5.showBill();
+				cout << "\n Press 1 to redirect main menu :";
+				cin >> gotoMenu;
+				system("CLS");
+				if (gotoMenu == 1)
+				{
+					menu();
+				}
+				else {
+					menu();
+				}
 
+			}
+			else {
+				system("CLS");
+				menu();
+			}
+		}
+		else if (mainChoice == 5) {
+			cout << "---THANKS FOR VISITING ---";
+			Sleep(1100);
+			system("CLS");
+			menu();
+
+		}
+		else
+		{
+			cout << "Invalid choice ! Redirecting .... \n Please Wait !" << endl;
+			Sleep(1100);
+			system("CLS");
+			menu();
+		}
 	}
 
 	int main()
