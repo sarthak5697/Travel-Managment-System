@@ -12,11 +12,15 @@ protected:
 	string userName;
 public:
 	ManageMenu() {
-		cout << "\n\n\n\n\n\n\n\n Enter Your Name to continue as an Admin"  ;
+		system("color 0A");
+		cout << "\n\n\n\n\n\n\n\n Enter Your Name to continue as an Admin" << endl ;
 		cin >> userName;
-		system("CLS ");
+		system("CLS");
 		menu();
 	}
+	~ManageMenu() {
+
+	};
 };
 
 class Customers {
@@ -131,14 +135,14 @@ public:
 			}
 			else {
 				cout << "Invalid Input! Redirecting .... \n Please Wait" << endl;
-				Sleep(1100);
+				Sleep(600);
 				system("CLS");
 				cabDetails();
 			}
 		}
 		else {
 			cout << "Invalid Input! Redirecting to the main menu .... \n Please Wait" << endl;
-			Sleep(1100);
+			Sleep(600);
 			system("CLS");
 			menu();
 				
@@ -211,7 +215,7 @@ float Cabs::lastcabCost;
 					else
 					{
 						cout << "Invalid choice ! Redirecting .... \n Please Wait !" << endl;
-						Sleep(1100);
+						Sleep(600);
 						system("CLS");
 						Hotels();
 					}
@@ -260,7 +264,7 @@ float Cabs::lastcabCost;
 					else
 					{
 						cout << "Invalid choice ! Redirecting .... \n Please Wait !" << endl;
-						Sleep(1100);
+						Sleep(600);
 						system("CLS");
 						Hotels();
 					}
@@ -301,7 +305,7 @@ float Cabs::lastcabCost;
 					else
 					{
 						cout << "Invalid choice ! Redirecting .... \n Please Wait !" << endl;
-						Sleep(1100);
+						Sleep(600);
 						system("CLS");
 						Hotels();
 					}
@@ -342,7 +346,7 @@ float Cabs::lastcabCost;
 					else
 					{
 						cout << "Invalid choice ! Redirecting .... \n Please Wait !" << endl;
-						Sleep(1100);
+						Sleep(600);
 						system("CLS");
 						Hotels();
 					}
@@ -352,7 +356,7 @@ float Cabs::lastcabCost;
 				else
 				{
 					cout << "Invalid choice ! Redirecting .... \n Please Wait !" << endl;
-					Sleep(1100);
+					Sleep(600);
 					system("CLS");
 					menu();
 					}
@@ -448,7 +452,7 @@ float Cabs::lastcabCost;
 			else
 			{
 				cout << "Invalid Input ! Redirecting to Previous Menu \n Please Wait !" << endl;
-				Sleep(1100);
+				Sleep(600);
 				system("CLS");
 				menu();
 			}
@@ -500,7 +504,7 @@ float Cabs::lastcabCost;
 		}
 		else if (mainChoice == 5) {
 			cout << "---THANKS FOR VISITING ---";
-			Sleep(1100);
+			Sleep(600);
 			system("CLS");
 			menu();
 
@@ -508,7 +512,7 @@ float Cabs::lastcabCost;
 		else
 		{
 			cout << "Invalid choice ! Redirecting .... \n Please Wait !" << endl;
-			Sleep(1100);
+			Sleep(600);
 			system("CLS");
 			menu();
 		}
@@ -516,7 +520,8 @@ float Cabs::lastcabCost;
 
 	int main()
 	{
-		std::cout << "hello world" << std::endl;
+		ManageMenu startObject;
+		
 		return 0;
 	}
 

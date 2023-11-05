@@ -1,0 +1,13 @@
+
+ Cutomer ID:123
+ Name:sarthak
+ Age:0
+ Mobile Number:-858993460
+ Gender:
+ Address:
+ Cutomer ID:5697
+ Name:sarthak
+ Age:23
+ Mobile Number:1234
+ Gender:delhi
+ Address:new
