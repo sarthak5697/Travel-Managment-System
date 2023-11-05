@@ -7,7 +7,8 @@ using namespace std;
 class Customers {
 public:
 	std::string name, gender, address;
-	int age, mobileNo,customerID;
+	int age, mobileNo; 
+	static int customerID;
 	char all[999];
 
 	void getDetails() {
@@ -51,6 +52,8 @@ public:
 
 };
 
+int Customers::customerID;
+
 class Cabs {
 public:
 	int cabChoice;
@@ -61,7 +64,7 @@ public:
 	void cabDetails()
 	{
 		cout << "We collaborate with fastest,safest and smartest cab service around the counrty" << endl;
-		cout << "-----------------STAR CABS-------------------" << endl;
+		cout << "-----------------STARTREK TRAVEL-------------------" << endl;
 		cout << "1. Rent a Standard Cab - Rs.15 for 1Km" << endl;
 		cout << "2. Rent a Luxury Cab - Rs.25 for 1Km" << endl;
 		cout << "\n To calculate the cost for your journey:" << endl;
@@ -352,18 +355,101 @@ float Cabs::lastcabCost;
 		{
 			ofstream outf("receipt.txt");
 			{
-				outf << "------  STAR TRAVEL AGENCY ------" << endl;
+				outf << "------  STARTREK TRAVEL AGENCY ------" << endl;
 				outf << "------------ RECEIPT ------------" << endl;
 				outf << "_________________________________" << endl;
 				outf << "Customer ID:" << Customers::customerID << endl << endl;
 				outf << "Description \t \t Total" << endl;
 				outf << "Hotel cost: \t \t" << fixed << setprecision(2) << Bookings::hotelCost << endl;
 				outf << "Travel (cab) cost :\t" << fixed << setprecision(2) << Cabs::lastcabCost << endl;
-				outf<<
+				outf << "_________________________________" << endl;
+				outf << "Total Charge: \t\t" << fixed << setprecision(2) << Bookings::hotelCost + Cabs::lastcabCost << endl;
+				outf << "_________________________________" << endl;
+				outf << "____________ THANK YOU __________" << endl;
+
 
 			}
+
+			outf.close();
+		}
+		void showBill() {
+			ifstream inf("receipt.txt");
+			{
+				if (!inf)
+				{
+					cout << "File opening error !" << endl;
+				}
+				while (!(inf.eof())) {
+					inf.getline(all, 999);
+					cout << all << endl;
+				}
+			}
+			inf.close();
 		}
 	};
+
+	void menu()
+	{
+		int mainChoice;
+		int inChoice;
+		int gotoMenu;
+
+
+		cout << "\t\t * STARTREK TRAVEL * \n" << endl;
+		cout << "----------------- MAIN MENU -----------------" << endl;
+		cout << "\t ________________________ " << endl;
+		cout << "\t|\t|\t|\t|\t|"<<endl;
+		cout << "\t|\tCustomer Management -> 1\t|" << endl;
+		cout << "\t|\tCabs Management     -> 2\t|" << endl;
+		cout << "\t|\tBookings Management -> 3\t|" << endl;
+		cout << "\t|\tCharges and Bills   -> 4\t|" << endl;
+		cout << "\t|\tExit                -> 5\t|" << endl;
+		cout << "\t|\t|\t|\t|\t|" << endl;
+		cout << "\t ________________________ " << endl;
+		cout << "\n Enter Your Choice :";
+		cin >> mainChoice;
+		system("CLS");
+		Customers a2;
+		Cabs a3;
+		Bookings a4;
+		Charges a5;
+		if (mainChoice == 1)
+		{
+			cout << "----- Customers -----" << endl;
+			cout << "1: Enter new customers" << endl;
+			cout << "2: See old customers" << endl;
+			cout << "\n Enter Choice :" << endl;
+			cin >> inChoice;
+			system("CLS");
+			if (inChoice == 1)
+			{
+				a2.getDetails();
+
+			}
+			else if (inChoice == 2)
+			{
+				a2.showDetails();
+			}
+			else
+			{
+				cout << "Invalid Input ! Redirecting to Previous Menu \n Please Wait !" << endl;
+				Sleep(1100);
+				system("CLS");
+				menu();
+			}
+			cout << "\n Press 1 to Redirect to main menu" ;
+			cin >> gotoMenu;
+			system("CLS");
+			if (gotoMenu == 1) {
+				menu();
+			}
+			else {
+				menu();
+			}
+		}
+		else if(mainChoice == 2)
+
+	}
 
 	int main()
 	{
