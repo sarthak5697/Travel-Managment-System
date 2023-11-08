@@ -13,7 +13,7 @@ protected:
 public:
 	ManageMenu() {
 		system("color 0A");
-		cout << "\n\n\n\n\n\n\n\n Enter Your Name to continue as an Admin" << endl ;
+		cout << "\n\n\n Enter Your Name to continue as an Admin" << endl ;
 		cin >> userName;
 		system("CLS");
 		menu();
@@ -82,21 +82,21 @@ public:
 
 	void cabDetails()
 	{
-		cout << "We collaborate with fastest,safest and smartest cab service around the counrty" << endl;
-		cout << "-----------------STARTREK TRAVEL-------------------" << endl;
+		cout << "We collaborate with fastest,safest and smartest cab service around the counrty" << endl<<endl;
+		cout << "-----------------STARTREK TRAVEL-------------------" << endl<<endl;
 		cout << "1. Rent a Standard Cab - Rs.15 for 1Km" << endl;
 		cout << "2. Rent a Luxury Cab - Rs.25 for 1Km" << endl;
 		cout << "\n To calculate the cost for your journey:" << endl;
-		cout << "Enter which kind of cab you need";
+		cout << "Enter which kind of cab you need : \t";
 		cin >> cabChoice;
-		cout << "Enter kilometers you have to travel";
+		cout << "Enter kilometers you have to travel : \t";
 		cin >> kilometers;
 		int hireCab;
 		if (cabChoice == 1) {
 			cabCost = kilometers * 15;
 			cout << "\n Your tour cost " << cabCost << " rupees for a Standard Cab" << endl;
-			cout << "Press 1 to hire this cab: or";
-			cout << "Press 2 to select another cab:";
+			cout << "Press 1 to hire this cab OR \t";
+			cout << "Press 2 to select another cab"<<endl;
 			cin >> hireCab;
 			system("CLS");
 			if (hireCab == 1)
@@ -111,7 +111,7 @@ public:
 			}
 			else {
 				cout << "Invalid Input! Redirecting .... \n Please Wait" << endl;
-				Sleep(999);
+				Sleep(600);
 				system("CLS");
 				cabDetails();
 			}
@@ -127,7 +127,7 @@ public:
 			{
 				lastcabCost = cabCost;
 				cout << "\n You have successfully hired a Luxury cab" << endl;
-				cout << "Goto Menu and take the bill " << endl;
+				cout << "\n Goto Menu and take the bill " << endl;
 			}
 			else if (hireCab == 2)
 			{
@@ -175,7 +175,7 @@ float Cabs::lastcabCost;
 			string hotelNo[] = { "Hilton" , "Raddison" , "Mariott", "Merdian" };
 			for (int i = 0; i < 4; i++)
 			{
-				cout << (i + 1) << ". Hotel" << hotelNo[i] << endl;
+				cout << (i + 1) << ". Hotel"<<" "<<" "<< hotelNo[i] << endl;
 			}
 			cout << "\n Currently we collaborated with above hotels" << endl;
 			cout << "Press any key to back or \n Enter number of the hotel you want to book:";
@@ -185,12 +185,12 @@ float Cabs::lastcabCost;
 					cout << "------ WELCOME TO THE HOTEL HILTON ------" << endl;
 					cout << "The Garden , food and beverage . Enjoy all you can drink , Stay cool and enjoy" << endl;
 					cout << "Packages offered by HILTON : \n" << endl;
-					cout << "1: Standard Pack" << endl;
-					cout << "\t All basic facilities you need just for: ₹10,000 " << endl;
+					cout << "1: Standard Pack :";
+					cout << "\t All basic facilities you need just for: Rs 10,000 " << endl;
 					cout << "2: Premium Pack" << endl;
-					cout << "\t Enjoy the premium experience at : ₹25,000 " << endl;
+					cout << "\t Enjoy the premium experience at : Rs 25,000 " << endl;
 					cout << "3: Luxury Pack" << endl;
-					cout << "\t Experience Luxury at : ₹50,000" << endl;
+					cout << "\t Experience Luxury at : Rs 50,000" << endl;
 					cout << "\n Press another key to back or \n Enter package number you want to book :";
 					cin >> packChoice;
 					if (packChoice == 1) {
@@ -220,7 +220,7 @@ float Cabs::lastcabCost;
 						Hotels();
 					}
 					int gotoMenu;
-					cout << "\n Press 1 to redirect to Main menu";
+					cout << "\n Press 1 to redirect to Main menu : \t" << endl;
 					cin >> gotoMenu;
 					if (gotoMenu == 1) {
 						menu();
@@ -234,12 +234,12 @@ float Cabs::lastcabCost;
 					cout << "------ WELCOME TO THE HOTEL RADDISON ------" << endl;
 					cout << "The Garden , food and beverage . Enjoy all you can drink , Stay cool and enjoy" << endl;
 					cout << "Packages offered by RADDISON : \n" << endl;
-					cout << "1: Standard Pack" << endl;
-					cout << "\t All basic facilities you need just for: ₹5,000 " << endl;
+					cout << "1: Standard Pack :";
+					cout << "\t All basic facilities you need just for: Rs 5,000 " << endl;
 					cout << "2: Premium Pack" << endl;
-					cout << "\t Enjoy the premium experience at : ₹15,000 " << endl;
+					cout << "\t Enjoy the premium experience at : Rs 15,000 " << endl;
 					cout << "3: Luxury Pack" << endl;
-					cout << "\t Experience Luxury at : ₹30,000" << endl;
+					cout << "\t Experience Luxury at : Rs 30,000" << endl;
 					cout << "\n Press another key to back or \n Enter package number you want to book :";
 					cin >> packChoice;
 					if (packChoice == 1) {
@@ -275,12 +275,12 @@ float Cabs::lastcabCost;
 					cout << "------ WELCOME TO THE HOTEL MARIOTT ------" << endl;
 					cout << "The Garden , food and beverage . Enjoy all you can drink , Stay cool and enjoy" << endl;
 					cout << "Packages offered by Mariott : \n" << endl;
-					cout << "1: Standard Pack" << endl;
-					cout << "\t All basic facilities you need just for: ₹20,000 " << endl;
+					cout << "1: Standard Pack :";
+					cout << "\t All basic facilities you need just for: Rs 20,000 " << endl;
 					cout << "2: Premium Pack" << endl;
-					cout << "\t Enjoy the premium experience at : ₹45,000 " << endl;
+					cout << "\t Enjoy the premium experience at : Rs 45,000 " << endl;
 					cout << "3: Luxury Pack" << endl;
-					cout << "\t Experience Luxury at : ₹70,000" << endl;
+					cout << "\t Experience Luxury at : Rs 70,000" << endl;
 					cout << "\n Press another key to back or \n Enter package number you want to book :";
 					cin >> packChoice;
 					if (packChoice == 1) {
@@ -316,12 +316,12 @@ float Cabs::lastcabCost;
 					cout << "------ WELCOME TO THE HOTEL MERIDIAN ------" << endl;
 					cout << "The Garden , food and beverage . Enjoy all you can drink , Stay cool and enjoy" << endl;
 					cout << "Packages offered by Meridian : \n" << endl;
-					cout << "1: Standard Pack" << endl;
-					cout << "\t All basic facilities you need just for: ₹10,000 " << endl;
+					cout << "1: Standard Pack :";
+					cout << "\t All basic facilities you need just for: Rs 10,000 " << endl;
 					cout << "2: Premium Pack" << endl;
-					cout << "\t Enjoy the premium experience at : ₹25,000 " << endl;
+					cout << "\t Enjoy the premium experience at : Rs 25,000 " << endl;
 					cout << "3: Luxury Pack" << endl;
-					cout << "\t Experience Luxury at : ₹50,000" << endl;
+					cout << "\t Experience Luxury at : Rs 50,000" << endl;
 					cout << "\n Press another key to back or \n Enter package number you want to book :";
 					cin >> packChoice;
 					if (packChoice == 1) {
@@ -414,17 +414,17 @@ float Cabs::lastcabCost;
 		int gotoMenu;
 
 
-		cout << "\t\t * STARTREK TRAVEL * \n" << endl;
-		cout << "----------------- MAIN MENU -----------------" << endl;
-		cout << "\t ________________________ " << endl;
-		cout << "\t|\t|\t|\t|\t|"<<endl;
-		cout << "\t|\tCustomer Management -> 1\t|" << endl;
-		cout << "\t|\tCabs Management     -> 2\t|" << endl;
-		cout << "\t|\tBookings Management -> 3\t|" << endl;
-		cout << "\t|\tCharges and Bills   -> 4\t|" << endl;
-		cout << "\t|\tExit                -> 5\t|" << endl;
-		cout << "\t|\t|\t|\t|\t|" << endl;
-		cout << "\t ________________________ " << endl;
+		cout << "\t\t\t   * STARTREK TRAVEL * \n" << endl;
+		cout << "\t----------------------- MAIN MENU ----------------------" << endl;
+		cout << "\t________________________________________________________\n" << endl;
+		//cout << "\t|\t|\t|\t|\t|"<<endl
+		cout << "\t|\t\tCustomer Management -> 1\t\t|" << endl;
+		cout << "\t|\t\tCabs Management     -> 2\t\t|" << endl;
+		cout << "\t|\t\tBookings Management -> 3\t\t|" << endl;
+		cout << "\t|\t\tCharges and Bills   -> 4\t\t|" << endl;
+		cout << "\t|\t\tExit                -> 5\t\t|" << endl;
+		/*cout << "\t|\t|\t|\t|\t|" << endl;*/ 
+		cout << "\t________________________________________________________\n" << endl;
 		cout << "\n Enter Your Choice :";
 		cin >> mainChoice;
 		system("CLS");
@@ -434,10 +434,13 @@ float Cabs::lastcabCost;
 		Charges a5;
 		if (mainChoice == 1)
 		{
-			cout << "----- Customers -----" << endl;
-			cout << "1: Enter new customers" << endl;
-			cout << "2: See old customers" << endl;
-			cout << "\n Enter Choice :" << endl;
+			cout << endl<<endl;
+			cout << "\t----- Customers -----" << endl;
+			cout << endl;
+
+			cout << "\t1: Enter new customers" << endl;
+			cout << "\t2: See old customers" << endl;
+			cout << "\t\n Enter Choice :" << endl;
 			cin >> inChoice;
 			system("CLS");
 			if (inChoice == 1)
@@ -456,7 +459,8 @@ float Cabs::lastcabCost;
 				system("CLS");
 				menu();
 			}
-			cout << "\n Press 1 to Redirect to main menu" ;
+			cout << "\n Press 1 to redirect to Main menu : \t" << endl;
+
 			cin >> gotoMenu;
 			system("CLS");
 			if (gotoMenu == 1) {
